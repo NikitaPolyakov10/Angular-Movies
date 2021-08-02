@@ -1,0 +1,7 @@
+<h1>{{'moviebox' | uppercase}}</h1>
+<div class="wrapper">
+<app-movie *ngFor="let item of moviesData"
+           [movie]="item"></app-movie>
+
+</div>
+<button (click)="nextPage()">Next Page</button>

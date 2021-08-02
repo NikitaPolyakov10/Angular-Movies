@@ -1,0 +1,10 @@
+<div class="movie"
+     routerLink="/1">
+  <img [src]="IMG_PATH + movie.poster_path"
+       alt="img">
+  <h2>{{movie.title}}</h2>
+  <div class="info">
+    <p>Average vote: {{movie.vote_average}}</p>
+    <p>Released: {{movie.release_date | date}}</p>
+  </div>
+</div>
