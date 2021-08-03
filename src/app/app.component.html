@@ -1,2 +1,15 @@
-<!-- <app-movies-container></app-movies-container> -->
-<router-outlet></router-outlet>
+<header>
+  <h1 routerLink="/movies">{{'moviebox' | uppercase}}</h1>
+  <nav>
+    <a routerLink="/movies"
+       routerLinkActive="active">Popular</a>
+    <a routerLink="/top_rated"
+       routerLinkActive="active">Top Rated</a>
+    <a routerLink="/upcoming"
+       routerLinkActive="active">Upcoming</a>
+    <a routerLink="/now_playing"
+       routerLinkActive="active">Now Playing</a>
+  </nav>
+</header>
+<router-outlet>
+</router-outlet>

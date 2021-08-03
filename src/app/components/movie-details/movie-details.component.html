@@ -1,0 +1,7 @@
+<h1>{{movieDetails.title}}</h1>
+<h3>{{movieDetails.tagline || null}}</h3>
+<p>{{movieDetails.overview}}</p>
+<p>{{movieDetails.backdrop_path || 'no img path'}}</p>
+<p>Status: {{movieDetails.status}}</p>
+<img src="{{IMG_PATH + movieDetails.backdrop_path}}"
+     alt="">

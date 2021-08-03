@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from 'src/app/interfaces/movie';
 import { MoviesService } from 'src/app/services/movies.service';
+import { MovieComponent } from '../movie/movie.component';
 
 @Component({
-  selector: 'app-movies-container',
-  templateUrl: './movies-container.component.html',
-  styleUrls: ['./movies-container.component.scss'],
+  selector: 'app-upcoming-movies',
+  templateUrl: './upcoming-movies.component.html',
+  styleUrls: ['./upcoming-movies.component.scss'],
 })
-export class MoviesContainerComponent implements OnInit {
-  moviesData: Movie[] = [];
+export class UpcomingMoviesComponent implements OnInit {
+  moviesData: any = [];
 
   constructor(private moviesService: MoviesService) {}
 
   ngOnInit(): void {
-    this.loadMovies('popular', 1);
+    this.loadMovies('upcoming', 1);
   }
 
   loadMovies(param: string, page: number) {

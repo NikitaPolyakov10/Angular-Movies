@@ -1,0 +1,11 @@
+h1 {
+  cursor: pointer;
+  max-width: 200px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+.active {
+  color: red;
+}

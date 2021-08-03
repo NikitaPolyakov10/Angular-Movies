@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from 'src/app/interfaces/movie';
 import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
-  selector: 'app-movies-container',
-  templateUrl: './movies-container.component.html',
-  styleUrls: ['./movies-container.component.scss'],
+  selector: 'app-top-rated-movies',
+  templateUrl: './top-rated-movies.component.html',
+  styleUrls: ['./top-rated-movies.component.scss'],
 })
-export class MoviesContainerComponent implements OnInit {
-  moviesData: Movie[] = [];
+export class TopRatedMoviesComponent implements OnInit {
+  moviesData: any = [];
 
   constructor(private moviesService: MoviesService) {}
 
   ngOnInit(): void {
-    this.loadMovies('popular', 1);
+    this.loadMovies('top_rated', 1);
   }
 
   loadMovies(param: string, page: number) {

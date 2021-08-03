@@ -11,9 +11,9 @@ import { Data } from '../interfaces/movie';
 export class MoviesService {
   constructor(private http: HttpClient) {}
 
-  loadMovies(page:number) {
+  loadMovies(param: string, page: number) {
     return this.http.get<Data>(
-      `https://api.themoviedb.org/3/movie/popular?api_key=d9adebc9c7c79afb794e0b1ace9395ff&language=en-US&page=${page}`
+      `https://api.themoviedb.org/3/movie/${param}?api_key=d9adebc9c7c79afb794e0b1ace9395ff&language=en-US&page=${page}`
     );
   }
 }
